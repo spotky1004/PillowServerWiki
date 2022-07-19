@@ -4,8 +4,6 @@ import morgan from "morgan";
 import cookieParser from "cookie-parser";
 import session from "express-session";
 import nunjucks from "nunjucks";
-import livereload from "livereload";
-import connectLiveReload from "connect-livereload";
 
 import env from "./env";
 env();
@@ -22,13 +20,15 @@ nunjucks.configure(path.join("public", "views"), {
 });
 
 // use livereload
-const liveReloadServer = livereload.createServer();
-liveReloadServer.server.once("connection", () => {
-  setTimeout(() => {
-    liveReloadServer.refresh("/");
-  }, 100);
-});
-app.use(connectLiveReload());
+if (process.env.NODE_ENV === "development") {
+  const liveReloadServer = require("livereload").createServer();
+  liveReloadServer.server.once("connection", () => {
+    setTimeout(() => {
+      liveReloadServer.refresh("/");
+    }, 100);
+  });
+  app.use(require("connect-livereload")());
+}
 
 const COOKIE_SECRET = process.env.COOKIE_SECRET as string;
 const SESSION_SECRET = process.env.SESSION_SECRET as string;
