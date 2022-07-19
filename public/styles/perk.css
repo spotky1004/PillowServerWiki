@@ -1,0 +1,46 @@
+@import url('./itemList.css');
+
+#item__main-info {
+  border: var(--border);
+  border-radius: 2vmin;
+
+  background-color: #8884;
+}
+
+.item__section-title {
+  margin: 2vh 18% 0.4vh 2%;
+  width: 80%;
+
+  font-size: 1.6em;
+  font-weight: bold;
+
+  border-bottom: 2px solid #fff6;
+}
+
+#item__image {
+  display: inline-block;
+  margin: 1vmin;
+
+  width: 8.5vmin;
+  height: 8.5vmin;
+
+  filter: drop-shadow(0.2vmin 0.2vmin 0.3vmin #2228);
+
+  image-rendering: pixelated;
+}
+#item__attributes {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+#item__name, #item__name * {
+  font-size: 5vmin;
+  font-weight: bold;
+  text-shadow: 0.2vmin 0.2vmin 0.3vmin #2228;
+}
+#item__description {
+  margin: 0 1vmin 1vh 1vmin;
+}
+#item__description * {
+  user-select: text;
+}

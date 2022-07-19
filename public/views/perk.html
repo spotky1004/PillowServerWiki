@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+<link rel="stylesheet" href="../styles/perk.css">
+<script src="../dist/views/park.js" type="module"></script>
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block itemDisplay %}
+<div class="item__section-title">
+  Main Infos
+</div>
+<div id="item__main-info">
+  <div id="item__attributes">
+    <span id="item__image"></span>
+    <span id="item__name">
+      <span style="color: #fff4">Air</span>
+    </span>
+  </div>
+  <div id="item__description">
+    <span style="color: #fff4">Select Perk to see more info about it</span>
+  </div>
+</div>
+<div class="item__section-title">
+  Extra Message
+</div>
+<div id="item__extra-message">
+  <span style="color: #fff4">Select Perk to see more info about it</span>
+</div>
+<div class="item__section-title">
+  From
+</div>
+<div id="item__from">
+  <span style="color: #fff4">Nowhere</span>
+</div>
+{% endblock %}

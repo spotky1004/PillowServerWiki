@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles/main.css">
+  <script src="../dist/index.js" type="module"></script>
+  {% block head %}
+  {% endblock %}
+  <!-- <title>{{title}}</title> -->
+  <title>베개서버 위키</title>
+</head>
+<body>
+  <nav id="page-nav">
+    <a class="page-nav__item" href="/">
+      Main
+    </a>
+    <a class="page-nav__item" href="/perk">
+      Perks
+    </a>
+    <a class="page-nav__item" href="/skill">
+      Skills
+    </a>
+    <span class="page-nav__gradient">
+    </span>
+  </nav>
+  <div id="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+  <div id="footer">
+    <div id="footer__texts">
+      <span>
+        For Pillowprism
+      </span>
+      <span>
+        Made by <a class="hover-link" href="https://github.com/spotky1004">Spotky1004</a> with 🌲
+      </span>
+    </div>
+  </div>
+
+  <div id="item-display-template" style="display: none">
+    {% block itemDisplay %}
+    {% endblock %}
+  </div>
+</body>
+</html>

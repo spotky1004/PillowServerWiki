@@ -1,0 +1,71 @@
+@media (orientation: landscape) {
+  #content {
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
+}
+
+@media (orientation: portrait) {
+  #content {
+    display: grid;
+    grid-template-columns: 45% 55%;
+  }
+}
+
+#content > div {
+  margin: 1vmin;
+  padding: 1vmin;
+
+  height: var(100% - 2*2vmin);
+  width: var(100% - 2*2vmin);
+
+  border: var(--border);
+  border-radius: 2vmin;
+
+  background-color: #2224;
+}
+
+#item-list__nav {
+  overflow-y: scroll;
+}
+#item-list__nav > .item-list__nav__item {
+  padding: 1vh 0.6vw;
+  margin: 0 0 0.5vh 0;
+
+  display: flex;
+  align-items: center;
+
+  border: var(--border);
+  border-radius: 1vmin;
+
+  background-color: #fff2;
+
+  cursor: pointer;
+  transition:
+    color 0.2s var(--timing1),
+    background-color 0.2s var(--timing1);
+}
+#item-list__nav > .item-list__nav__item, #item-list__nav > .item-list__nav__item * {
+  font-size: 2vmin;
+  text-shadow:
+     1px  1px 0 #000,
+     0px  1px 0 #000,
+     1px  0px 0 #000,
+    -1px -1px 0 #000,
+    -1px  0px 0 #000,
+     0px -1px 0 #000;
+}
+#item-list__nav > .item-list__nav__item:hover {
+  color: #fff !important;
+  background-color: #333;
+}
+#item-list__nav > .item-list__nav__item:hover * {
+  color: #fff !important;
+}
+#item-list__nav > .item-list__nav__item > .item-list__nav__item__image {
+  display: inline-block;
+  margin-right: 0.6vw;
+
+  width: 3vmin;
+  height: 3vmin;
+}

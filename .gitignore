@@ -1,0 +1,6 @@
+./dist
+assets/itemImages
+bin
+node_modules
+.env.*
+!.env.sample
