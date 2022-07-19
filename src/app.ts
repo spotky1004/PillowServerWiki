@@ -57,7 +57,8 @@ app.use((err: ResponseError, req: express.Request, res: express.Response, next: 
   res.locals = {
     title: "Error!",
     message: err.message,
-    error: process.env.NODE_ENV !== "production" ? err : {}
+    error: err
+    // error: process.env.NODE_ENV !== "production" ? err : {}
   };
   res.status(err.status || 500);
   res.render("error");
